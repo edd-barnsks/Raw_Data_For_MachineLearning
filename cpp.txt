@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+class Dog {
+private:
+    string name;
+public:
+    Dog(string name) : name(name) {}
+
+    string bark() {
+        return name + " says woof!";
+    }
+};
+
+#include <vector>
+vector<int> numbers = {1, 2, 3, 4, 5};
+for (int n : numbers) {
+    cout << n << endl;
+}
+
+bool isPrime(int n) {
+    if (n < 2) return false;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+#include <algorithm>
+vector<int> v = {3, 1, 4, 1, 5};
+sort(v.begin(), v.end());
+
+#include <map>
+map<string, int> scores;
+scores["Alice"] = 10;
+scores["Bob"] = 20;
+cout << scores["Alice"] << endl;

@@ -1,0 +1,55 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        Console.WriteLine("Hello, World!");
+    }
+}
+
+public int Add(int a, int b) {
+    return a + b;
+}
+
+public class Dog {
+    public string Name { get; set; }
+
+    public Dog(string name) {
+        Name = name;
+    }
+
+    public string Bark() {
+        return $"{Name} says woof!";
+    }
+}
+
+using System.Collections.Generic;
+
+List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+foreach (int n in numbers) {
+    Console.WriteLine(n);
+}
+
+for (int i = 0; i < 10; i++) {
+    Console.WriteLine(i);
+}
+
+public bool IsPrime(int n) {
+    if (n < 2) return false;
+    for (int i = 2; i <= Math.Sqrt(n); i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+string text = "Hello World";
+string[] words = text.Split(' ');
+foreach (string word in words) {
+    Console.WriteLine(word);
+}
+
+public int Fibonacci(int n) {
+    if (n <= 1) return n;
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+
+var result = numbers.Where(x => x % 2 == 0).ToList();

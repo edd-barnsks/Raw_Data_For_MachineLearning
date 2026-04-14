@@ -1,0 +1,44 @@
+def greet(name)
+  "Hello, #{name}!"
+end
+
+puts greet("World")
+
+def add(a, b)
+  a + b
+end
+
+class Dog
+  attr_reader :name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def bark
+    "#{@name} says woof!"
+  end
+end
+
+numbers = [1, 2, 3, 4, 5]
+numbers.each { |n| puts n }
+
+squares = numbers.map { |x| x ** 2 }
+puts squares.inspect
+
+def fibonacci(n)
+  return n if n <= 1
+  fibonacci(n - 1) + fibonacci(n - 2)
+end
+
+def is_prime(n)
+  return false if n < 2
+  (2..Math.sqrt(n).to_i).none? { |i| n % i == 0 }
+end
+
+text = "Hello World"
+words = text.split(" ")
+words.each { |w| puts w }
+
+evens = (1..10).select { |n| n.even? }
+puts evens.inspect

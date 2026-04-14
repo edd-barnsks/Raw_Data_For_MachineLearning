@@ -1,0 +1,46 @@
+<?php
+
+function greet($name) {
+    return "Hello, " . $name . "!";
+}
+
+echo greet("World");
+
+class Dog {
+    private $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+
+    public function bark() {
+        return $this->name . " says woof!";
+    }
+}
+
+$numbers = [1, 2, 3, 4, 5];
+foreach ($numbers as $n) {
+    echo $n . "\n";
+}
+
+function isPrime($n) {
+    if ($n < 2) return false;
+    for ($i = 2; $i <= sqrt($n); $i++) {
+        if ($n % $i == 0) return false;
+    }
+    return true;
+}
+
+$squares = array_map(fn($x) => $x * $x, $numbers);
+print_r($squares);
+
+function fibonacci($n) {
+    if ($n <= 1) return $n;
+    return fibonacci($n - 1) + fibonacci($n - 2);
+}
+
+$text = "Hello World";
+$words = explode(" ", $text);
+foreach ($words as $word) {
+    echo $word . "\n";
+}

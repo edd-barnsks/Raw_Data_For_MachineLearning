@@ -1,0 +1,48 @@
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+const add = (a, b) => a + b;
+
+async function fetchUser(id) {
+    const res = await fetch(`/api/users/${id}`);
+    const data = await res.json();
+    return data;
+}
+
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    speak() {
+        return `${this.name} makes a noise.`;
+    }
+}
+
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+console.log(doubled);
+
+document.getElementById("btn").addEventListener("click", () => {
+    alert("Button clicked!");
+});
+
+const person = { name: "Alice", age: 30 };
+const { name, age } = person;
+console.log(name, age);
+
+function bubbleSort(arr) {
+    let n = arr.length;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            }
+        }
+    }
+    return arr;
+}
+
+const square = x => x * x;
+const evens = [1,2,3,4,5,6].filter(n => n % 2 === 0);

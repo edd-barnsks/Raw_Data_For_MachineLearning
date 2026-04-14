@@ -1,0 +1,51 @@
+fn main() {
+    println!("Hello, World!");
+}
+
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+fn fibonacci(n: u32) -> u32 {
+    if n <= 1 {
+        return n;
+    }
+    fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+struct Dog {
+    name: String,
+}
+
+impl Dog {
+    fn bark(&self) -> String {
+        format!("{} says woof!", self.name)
+    }
+}
+
+let numbers = vec![1, 2, 3, 4, 5];
+let sum: i32 = numbers.iter().sum();
+println!("Sum: {}", sum);
+
+let doubled: Vec<i32> = numbers.iter().map(|x| x * 2).collect();
+
+fn is_prime(n: u32) -> bool {
+    if n < 2 {
+        return false;
+    }
+    for i in 2..=(n as f64).sqrt() as u32 {
+        if n % i == 0 {
+            return false;
+        }
+    }
+    true
+}
+
+let mut v = vec![3, 1, 4, 1, 5];
+v.sort();
+println!("{:?}", v);
+
+use std::collections::HashMap;
+let mut scores = HashMap::new();
+scores.insert("Alice", 10);
+scores.insert("Bob", 20);

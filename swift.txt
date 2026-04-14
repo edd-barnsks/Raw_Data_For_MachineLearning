@@ -1,0 +1,47 @@
+import Foundation
+
+print("Hello, World!")
+
+func greet(name: String) -> String {
+    return "Hello, \(name)!"
+}
+
+func add(_ a: Int, _ b: Int) -> Int {
+    return a + b
+}
+
+class Dog {
+    var name: String
+
+    init(name: String) {
+        self.name = name
+    }
+
+    func bark() -> String {
+        return "\(name) says woof!"
+    }
+}
+
+let numbers = [1, 2, 3, 4, 5]
+for n in numbers {
+    print(n)
+}
+
+let doubled = numbers.map { $0 * 2 }
+print(doubled)
+
+func isPrime(_ n: Int) -> Bool {
+    if n < 2 { return false }
+    for i in 2...Int(Double(n).squareRoot()) {
+        if n % i == 0 { return false }
+    }
+    return true
+}
+
+func fibonacci(_ n: Int) -> Int {
+    if n <= 1 { return n }
+    return fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+var dict = ["alice": 30, "bob": 25]
+print(dict["alice"] ?? 0)

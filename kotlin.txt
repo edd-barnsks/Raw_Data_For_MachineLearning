@@ -1,0 +1,43 @@
+fun main() {
+    println("Hello, World!")
+}
+
+fun greet(name: String): String {
+    return "Hello, $name!"
+}
+
+fun add(a: Int, b: Int): Int = a + b
+
+class Dog(val name: String) {
+    fun bark(): String {
+        return "$name says woof!"
+    }
+}
+
+val numbers = listOf(1, 2, 3, 4, 5)
+for (n in numbers) {
+    println(n)
+}
+
+val doubled = numbers.map { it * 2 }
+println(doubled)
+
+fun isPrime(n: Int): Boolean {
+    if (n < 2) return false
+    for (i in 2..Math.sqrt(n.toDouble()).toInt()) {
+        if (n % i == 0) return false
+    }
+    return true
+}
+
+fun fibonacci(n: Int): Int {
+    if (n <= 1) return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+val evens = (1..10).filter { it % 2 == 0 }
+println(evens)
+
+data class Person(val name: String, val age: Int)
+val alice = Person("Alice", 30)
+println(alice.name)
